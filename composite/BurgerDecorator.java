@@ -9,6 +9,6 @@ package composite;
  */
 public abstract class BurgerDecorator extends BurgerComponent
 {
-    public abstract String getDesc();
+  //  public abstract String getDesc();
     
 }

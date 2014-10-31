@@ -10,7 +10,7 @@ package composite;
 public class BuildBurger
 {
    public static void runTest(){
-       BurgerComponent burgerComponent = new Burger("Beef","1/3lb","In a bun");
+       /*BurgerComponent burgerComponent = new Burger("Beef","1/3lb","In a bun");
        System.out.println(burgerComponent.getDesc()+"$"+burgerComponent.cost());
        
        BurgerComponent burgerComponent1 = new Burger("Beef","1/3lb","In a bun");
@@ -29,6 +29,6 @@ public class BuildBurger
        burgerComponent3 = new Toppings(burgerComponent3, new String[] {"Bermuda Red Onion","Black Olives","Carrot Strings","Coleslaw"});
        burgerComponent3 = new PremiumToppings(burgerComponent3, new String [] {"Applewood Smoked Bacon"});
        burgerComponent3 = new Sauce(burgerComponent3, new String []{"Apricot Sauce","Basil pesto"});
-       System.out.println(burgerComponent3.getDesc()+ "\n$" + burgerComponent3.cost());
+       System.out.println(burgerComponent3.getDesc()+ "\n$" + burgerComponent3.cost());*/
     }
 }

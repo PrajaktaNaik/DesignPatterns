@@ -5,15 +5,15 @@ public class BuildOrder {
     public static Component getOrder()
     {
        Composite order = new Composite( "Order" ) ;
-        order.addChild(new CrispyOnionSpring("Crispy Onion Strings", 5.50 ));
-        order.addChild(new ThePurist("The Purist", 8.00 ));
+        order.addChild(new Leaf("Crispy Onion Strings", 5.50 ));
+        order.addChild(new Leaf("The Purist", 8.00 ));
         
        BurgerComponent burgerComponent3 = new Burger("Beef","1/3lb","In a bun");
        burgerComponent3 = new CheeseTopping(burgerComponent3,new String[] {"Dansh Blue Cheese","Horseadish Cheddar"});
        burgerComponent3 = new Toppings(burgerComponent3, new String[] {"Bermuda Red Onion","Black Olives","Carrot Strings","Coleslaw"});
        burgerComponent3 = new PremiumToppings(burgerComponent3, new String [] {"Applewood Smoked Bacon"});
        burgerComponent3 = new Sauce(burgerComponent3, new String []{"Apricot Sauce","Basil pesto"});
-      order.addChild(new CustomBurger(burgerComponent3));
+       order.addChild(new CustomBurger(burgerComponent3));
        //  System.out.println(burgerComponent3.getDesc()+ "\n$" + burgerComponent3.cost());
        /* Composite custhjomBurger = new Composite( "Build Your Own Burger" ) ;
         customBurger.addChild(new Leaf("Beef, 1/3 lb on a Bun", 9.50 )); // base price for 1/3 lb

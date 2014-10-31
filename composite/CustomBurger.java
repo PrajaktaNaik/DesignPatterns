@@ -1,4 +1,5 @@
 package composite;
+import java.text.DecimalFormat;
 
 
 /**
@@ -11,29 +12,31 @@ public class CustomBurger implements Component
 {
     private String description ;
     private Double price ;
-
-    public CustomBurger(BurgerComponent burger )
+    private BurgerComponent burger;
+    
+    public CustomBurger ( BurgerComponent burger)
     {
-        description = burger.getDesc();
-        price = burger.cost();
+        this.burger = burger;
+        price = burger.cost() ;
+        description = "Build Your Own Burger";
     }
     
     public void printDescription() {
-        
-        System.out.println("Build your Own Burger "+price); 
-        System.out.println( description);
+        DecimalFormat fmt = new DecimalFormat("0.00");
+        System.out.println( description + " " + fmt.format(price) ) ;
+        this.burger.printDescription();
     }
 
     public void addChild(Component c) {
-	    // no implementation
-	}
-
-	public void removeChild(Component c) {
         // no implementation
-	}
+    }
 
-	public Component getChild(int i) {
+    public void removeChild(Component c) {
+        // no implementation
+    }
+
+    public Component getChild(int i) {
         // no implementation
         return null ;
-	}
+    }
 }

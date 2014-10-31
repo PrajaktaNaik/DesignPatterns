@@ -7,7 +7,7 @@ package composite;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PremiumToppings extends BurgerDecorator
+public class PremiumToppings extends BurgerDecorator 
 {
    BurgerComponent burgerComponent;
    String[] premiumtoppings = new String[15];
@@ -16,15 +16,16 @@ public class PremiumToppings extends BurgerDecorator
        this.premiumtoppings=premiumtoppings;
     }
     
-    public String getDesc(){
-        String desc=burgerComponent.getDesc()+"\n";
+    public void printDescription(){
+        String desc="";
+         burgerComponent.printDescription();
         for(int i=0;i<premiumtoppings.length;i++)
         {
             desc=desc + premiumtoppings[i];
             if(i!=premiumtoppings.length-1)
             desc=desc+"+";
         }
-        return desc;
+        System.out.println(desc);
     }
     
     public double cost(){
